@@ -1,0 +1,306 @@
+/* Основные стили */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://via.placeholder.com/1920x1080?text=Electronics') no-repeat center center;
+  background-size: cover;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.top-bar a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.top-bar a:hover {
+  color: #0d6efd !important;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-outline-light:hover {
+  color: #0d6efd !important;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+/* About Page Styles */
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+  background-size: cover;
+}
+
+.about-page .card {
+  transition: all 0.3s ease;
+}
+
+.about-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-page .border-rounded {
+  border-radius: 10px;
+}
+
+/* Services Page Styles */
+.services-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+  background-size: cover;
+}
+
+.services-page .card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.services-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services-page .bg-primary-light {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.services-page .step-icon {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Contact Page Styles */
+.contact-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+  background-size: cover;
+}
+
+.contact-page .card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contact-page .form-control {
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.contact-page .form-label {
+  font-weight: 500;
+}
+
+.contact-page .map-container {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .contact-page .map-container {
+    height: 250px !important;
+  }
+}
+
+/* About Section Styles */
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section .card.shadow-sm-hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.about-section .card.shadow-sm-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.about-section .transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Animation for stats counter */
+@keyframes countUp {
+  from { width: 0; }
+  to { width: var(--width); }
+}
+
+.stats-bar {
+  height: 6px;
+  background-color: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.stats-bar-fill {
+  height: 100%;
+  background-color: #0d6efd;
+  animation: countUp 1.5s ease-out forwards;
+}
+
+/* Services Section Styles */
+.services-section .card {
+  transition: all 0.3s ease;
+}
+
+.services-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.services-section .shadow-sm-hover {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.services-section .transition-all {
+  transition: all 0.3s ease;
+}
+
+.services-section .max-w-800 {
+  max-width: 800px;
+}
+
+.workflow-section {
+  background-color: #f8f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.partners-section .badge {
+  border-radius: 50rem;
+  font-weight: 500;
+}
+
+/* Sanctioned Components Section */
+.sanctioned-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
+              url('https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.bg-dark-2 {
+  background-color: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.sanctioned-section .card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(241, 241, 241, 0.1);
+}
+
+.sanctioned-section .card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(13, 110, 253, 0.5);
+}
+
+.sanctioned-section .shadow-lg-hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.sanctioned-section .shadow-lg-hover:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.sanctioned-section .icon-wrapper {
+  color: #0d6efd;
+}
+
+.sanctioned-section .step-number {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+}
+
+.sanctioned-section .step-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.sanctioned-section .max-w-800 {
+  max-width: 800px;
+}
+
+.sanctioned-section .transition-all {
+  transition: all 0.3s ease;
+}
+
+.sanctioned-section .workflow-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Стили для кнопок */
+.sanctioned-section .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+}
+
+.sanctioned-section .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.sanctioned-section .btn-outline-light {
+  color: #f8f9fa;
+  border-color: #f8f9fa;
+  background-color: transparent;
+}
+
+.sanctioned-section .btn-outline-light:hover {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+/* Адаптивность кнопок */
+@media (max-width: 576px) {
+  .sanctioned-section .d-flex.gap-3 {
+    gap: 1rem !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sanctioned-section .btn-lg {
+    width: 100%;
+    max-width: 280px;
+  }
+}
