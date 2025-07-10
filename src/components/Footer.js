@@ -31,14 +31,14 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <FaEnvelope className="me-2" />
-                sales@sinocore-supply.com
+                sales@zenith.com
               </li>
             </ul>
           </div>
           <div className="col-lg-4 mb-4">
             <h5 className="fw-bold mb-3">Социальные сети</h5>
             <div className="d-flex gap-3 mb-3">
-              <a href="https://t.me/sinocore_support" className="text-white">
+              <a href="https://t.me/zenith_support" className="text-white">
                 <FaTelegram size={24} />
               </a>
               <a href="https://wa.me/8613900000000" className="text-white">
