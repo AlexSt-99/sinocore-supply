@@ -8,10 +8,10 @@ const HeroSection = () => {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <h1 className="display-4 fw-bold mb-4">
-              Надёжные поставки электроники из Китая
+              Надежные поставки компонентов и микроэлектроники из Китая
             </h1>
             <p className="lead mb-4">
-              В любое время, в любых условиях. Полный цикл логистики: от поиска и закупки компонентов до доставки под ключ.
+              В любое время, в любых условиях. Полный цикл поставок: от поиска и закупки до доставки под ключ.
             </p>
             <div className="d-flex gap-3">
               <Link to="/contact" className="btn btn-primary btn-lg px-4">

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 mb-4">
-            <h5 className="fw-bold mb-3">SinoCore Supply</h5>
+            <h5 className="fw-bold mb-3">Zenith Ltd.</h5>
             <p>Международная торговая компания, специализирующаяся на поставках микроэлектроники, радиокомпонентов и промышленного оборудования из Китая в Россию.</p>
           </div>
           <div className="col-lg-4 mb-4">
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
         <hr className="my-4" />
         <div className="text-center">
-          <p className="mb-0">© {new Date().getFullYear()} SinoCore Supply. Все права защищены.</p>
+          <p className="mb-0">© {new Date().getFullYear()} Zenith Ltd. Все права защищены.</p>
         </div>
       </div>
     </footer>

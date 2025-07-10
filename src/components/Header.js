@@ -11,12 +11,12 @@ const Header = () => {
             <a href="tel:+74991234567" className="text-white me-3">
               <FaPhone className="me-1" /> +7 (499) 123-45-67
             </a>
-            <a href="mailto:sales@sinocore-supply.com" className="text-white me-3">
-              <FaEnvelope className="me-1" /> sales@sinocore-supply.com
+            <a href="mailto:sales@zenith.com" className="text-white me-3">
+              <FaEnvelope className="me-1" /> sales@zenith-supply.com
             </a>
           </div>
           <div className="social">
-            <a href="https://t.me/sinocore_support" className="text-white me-2">
+            <a href="https://t.me/zenith_support" className="text-white me-2">
               <FaTelegram />
             </a>
             <a href="https://wa.me/8613900000000" className="text-white">
@@ -27,9 +27,16 @@ const Header = () => {
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div className="container">
-          <Link className="navbar-brand fw-bold" to="/">
-            <span className="text-primary">Sino</span>Core Supply
-          </Link>
+          <div className="d-flex align-items-center">
+                        <img 
+              src="/favicon.ico" 
+              alt="Zenith Ltd. Logo" 
+              style={{ height: '40px', width: '40px' }}
+            />
+            <Link className="navbar-brand fw-bold fs-3 me-2" to="/">
+                 Zenith Ltd.
+            </Link>
+          </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>

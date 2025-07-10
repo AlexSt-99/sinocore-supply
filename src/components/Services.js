@@ -128,7 +128,7 @@ const Services = () => {
           "serviceType": "Поставка электронных компонентов",
           "provider": {
             "@type": "Organization",
-            "name": "SinoCore Supply"
+            "name": "Zenith Ltd."
           },
           "hasOfferCatalog": {
             "@type": "OfferCatalog",

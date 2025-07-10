@@ -98,7 +98,7 @@ const SanctionedComponents = () => {
             "serviceType": "Поставка санкционных компонентов",
             "provider": {
               "@type": "Organization",
-              "name": "SinoCore Supply"
+              "name": "Zenith Ltd."
             },
             "description": "Специальные условия поставки дефицитных и санкционных электронных компонентов",
             "areaServed": {

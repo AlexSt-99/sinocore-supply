@@ -29,7 +29,7 @@ const ContactPage = () => {
                   
                   <div className="mb-4">
                     <h5 className="fw-bold mb-3">Реквизиты компании</h5>
-                    <p className="mb-1"><strong>SinoCore Supply</strong></p>
+                    <p className="mb-1"><strong>Zenith Ltd.</strong></p>
                     <p className="text-muted">Торгово-логистическая компания</p>
                   </div>
 
@@ -96,7 +96,7 @@ const ContactPage = () => {
 
                   <form>
                     <div className="mb-3">
-                      <label htmlFor="name" className="form-label">Имя и компания *</label>
+                      <label htmlFor="name" className="form-label">Имя *</label>
                       <input type="text" className="form-control" id="name" required />
                     </div>
 
@@ -155,12 +155,7 @@ const ContactPage = () => {
                     <h5 className="fw-bold">Шэньчжэнь, Китай</h5>
                     <p className="text-muted mb-0">ул. Наншань, 45</p>
                   </div>
-                  <div className="map-container" style={{ height: '300px', backgroundColor: '#eee' }}>
-                    {/* Здесь будет карта Китая */}
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <p className="text-muted">Карта: Шэньчжэнь, Китай</p>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -172,12 +167,7 @@ const ContactPage = () => {
                     <h5 className="fw-bold">Москва, Россия</h5>
                     <p className="text-muted mb-0">ул. Автозаводская, 23</p>
                   </div>
-                  <div className="map-container" style={{ height: '300px', backgroundColor: '#eee' }}>
-                    {/* Здесь будет карта Москвы */}
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <p className="text-muted">Карта: Москва, Россия</p>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>

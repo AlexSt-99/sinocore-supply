@@ -22,7 +22,7 @@ const About = () => {
     {
       icon: <FaRoute size={24} className="text-primary" />,
       title: "Гибкая логистика",
-      description: "Маршруты: Китай → Казахстан / ОАЭ → Россия с таможенным оформлением"
+      description: "Маршруты, позволяющие оптимизировать время и расходы для любого клиента."
     },
     {
       icon: <FaUsers size={24} className="text-primary" />,
@@ -49,10 +49,10 @@ const About = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "SinoCore Supply",
+            "name": "Zenith Ltd.",
             "description": "Международная торговая компания, специализирующаяся на поставках электронных компонентов из Китая в Россию",
-            "url": "https://sinocore-supply.com",
-            "logo": "https://sinocore-supply.com/logo.png",
+            "url": "https://zenith.com",
+            "logo": "https://zenith.com/logo.png",
             "foundingDate": "2016",
             "address": {
               "@type": "PostalAddress",
@@ -64,7 +64,7 @@ const About = () => {
               "@type": "ContactPoint",
               "telephone": "+7 (499) 123-45-67",
               "contactType": "sales",
-              "email": "sales@sinocore-supply.com"
+              "email": "sales@zenith.com"
             }
           })}
         </script>
@@ -78,16 +78,16 @@ const About = () => {
           className="row align-items-center"
         >
           <div className="col-lg-6 mb-5 mb-lg-0">
-            <h1 className="fw-bold mb-4 display-5">О компании SinoCore Supply</h1>
+            <h1 className="fw-bold mb-4 display-5">О компании Zenith Ltd.</h1>
             <p className="lead text-primary mb-4">
               Мы обеспечиваем российские предприятия надёжными поставками высокотехнологичной продукции — быстро, легально и без компромиссов по качеству.
             </p>
             <div className="mb-4">
               <p>
-                <strong>SinoCore Supply</strong> — это международная торговая компания, специализирующаяся на поставках электронной компонентной базы (ЭКБ), промышленного оборудования и товаров специального назначения из Китая в Россию.
+                <strong>Zenith Ltd.</strong> — это международная торговая компания, специализирующаяся на поставках электронной компонентной базы (ЭКБ), промышленного оборудования и товаров специального назначения из Китая в Россию.
               </p>
               <p>
-                Мы работаем напрямую с производителями и авторизованными поставщиками в Китае, обеспечивая стабильные поставки даже в условиях дефицита и логистических ограничений.
+                Мы работаем напрямую с производителями и авторизованными поставщиками в Китае и по всему миру, обеспечивая стабильные поставки даже в условиях дефицита и логистических ограничений.
               </p>
             </div>
 
@@ -103,7 +103,7 @@ const About = () => {
             <div className="position-relative">
               <img 
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="О компании SinoCore Supply" 
+                alt="О компании Zenith Ltd." 
                 className="img-fluid rounded-3 shadow-lg mb-4"
                 loading="lazy"
               />
