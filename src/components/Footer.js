@@ -49,6 +49,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li className="mb-2"><a href="/about" className="text-white">О компании</a></li>
               <li className="mb-2"><a href="/services" className="text-white">Услуги</a></li>
+              <li className="mb-2"><a href="/products" className="text-white">Товары</a></li>
               <li className="mb-2"><a href="/contact" className="text-white">Контакты</a></li>
             </ul>
           </div>

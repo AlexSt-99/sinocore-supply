@@ -304,3 +304,13 @@ body {
     max-width: 280px;
   }
 }
+
+.products-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6531438636dbdd2c030d0b2a_65314cbaec70fb565b673c79/scale_1200');
+  background-size: cover;
+  background-position: center;
+}
+
+.products-page {
+  background-color: #fff;
+}
