@@ -31,10 +31,10 @@ const Header = () => {
                         <img 
               src="/favicon.ico" 
               alt="Zenith Ltd. Logo" 
-              style={{ height: '40px', width: '40px' }}
+              style={{ height: '40px', width: '40px', marginRight: '15px'  }}
             />
             <Link className="navbar-brand fw-bold fs-3 me-2" to="/">
-                 Zenith Ltd.
+                 Zenith
             </Link>
           </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

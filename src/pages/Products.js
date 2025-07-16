@@ -1,64 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBoxOpen, FaSearchDollar, FaShippingFast, FaCertificate } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Products = () => {
+  const [expandedDescriptions, setExpandedDescriptions] = useState({});
+
+  const toggleDescription = (id) => {
+    setExpandedDescriptions(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
   // Пример данных о товарах
   const products = [
     {
       id: 1,
       name: "Аналог ADIS 16488 Инерциальный измерительный блок (IMU)",
-      description: "высокоточный IMU с 3-осевыми гироскопами (±2000°/с) и акселерометрами (±18 g). Встроенная температурная компенсация, цифровой интерфейс (SPI). Применяется в навигации, БПЛА, робототехнике",
+      description: "Высокоточный IMU с 3-осевыми гироскопами (±2000°/с) и акселерометрами (±18 g). Встроенная температурная компенсация, цифровой интерфейс (SPI). Применяется в навигации, БПЛА, робототехнике",
       image: "/productimg/ADIS16488.jpg",
       category: "Даталогеры"
     },
     {
       id: 2,
       name: "Реле электромагнитное РЭС 47",
-      description: "электромагнитное реле общего назначения с переключающими контактами. Работает в цепях постоянного и переменного тока, компактное, надежное. Применяется в автоматике, защитных схемах, промышленной электронике.",
+      description: "Электромагнитное реле общего назначения с переключающими контактами. Работает в цепях постоянного и переменного тока, компактное, надежное. Применяется в автоматике, защитных схемах, промышленной электронике.",
       image: "/productimg/РЭС47-2.jpg",
       category: "Электронные компоненты"
     },
     {
       id: 3,
-      name: "Высокоточный трехосевой акселерометр  ADXL357B",
-      description: "высокоточный трёхосевой акселерометр с низким уровнем шума и широким диапазоном измерений (±40 g). Оснащён цифровым интерфейсом (SPI/I²C), встроенной температурной компенсацией. Применяется в промышленной автоматике, навигации, мониторинге вибраций.",
+      name: "Высокоточный трехосевой акселерометр ADXL357B",
+      description: "Высокоточный трёхосевой акселерометр с низким уровнем шума и широким диапазоном измерений (±40 g). Оснащён цифровым интерфейсом (SPI/I²C), встроенной температурной компенсацией. Применяется в промышленной автоматике, навигации, мониторинге вибраций.",
       image: "/productimg/ADXL357B-2.jpg",
       category: "Датчики"
     },
     {
       id: 4,
       name: "Батарейки Molicel оригинал",
-      description: "оригинальные высокоэффективные литий-ионные батарейки и аккумуляторы с высокой токоотдачей и энергоемкостью. Оптимальны для мощных устройств: вейпов, электротранспорта, промышленного оборудования.",
+      description: "Оригинальные высокоэффективные литий-ионные батарейки и аккумуляторы с высокой токоотдачей и энергоемкостью. Оптимальны для мощных устройств: вейпов, электротранспорта, промышленного оборудования.",
       image: "/productimg/Molice.jpg",
       category: "Аккумуляторы и батарейки"
     },
     {
       id: 5,
       name: "U-blox NEO-M8N-0-10",
-      description: "высокочувствительный GPS-модуль с поддержкой одновременного приёма сигналов GPS/ГЛОНАСС. Обеспечивает быстрое позиционирование, низкое энергопотребление и устойчивость к помехам. Применяется в навигации, трекерах, дронах и геодезии.",
+      description: "Высокочувствительный GPS-модуль с поддержкой одновременного приёма сигналов GPS/ГЛОНАСС. Обеспечивает быстрое позиционирование, низкое энергопотребление и устойчивость к помехам. Применяется в навигации, трекерах, дронах и геодезии.",
       image: "/productimg/NEO-M8N-0-10.jpg",
       category: "Электронные компоненты"
     },
     {
       id: 6,
       name: "Коннекторы amhenol",
-      description: "высококачественные коннекторы для промышленного и коммерческого применения. Отличаются надежностью, устойчивостью к вибрациям и перепадам температур. Широкий ассортимент: циркулярные, прямоугольные, RF, коаксиальные и специализированные решения.",
+      description: "Высококачественные коннекторы для промышленного и коммерческого применения. Отличаются надежностью, устойчивостью к вибрациям и перепадам температур. Широкий ассортимент: циркулярные, прямоугольные, RF, коаксиальные и специализированные решения.",
       image: "/productimg/amhenol.jpg",
       category: "Электронные компоненты"
     },
     {
       id: 7,
       name: "XILINX FGPA XC7K325T-2FFG676I",
-      description: "высокопроизводительная ПЛИС (FPGA) серии Kintex-7 с 326 тыс. логических ячеек, встроенной памятью DSP-блоками и поддержкой высокоскоростных интерфейсов (PCIe, SATA, DDR3). Корпус FFG676 (676-контактный BGA). Применяется в телекоммуникациях, обработке сигналов, машинном зрении.",
+      description: "Высокопроизводительная ПЛИС (FPGA) серии Kintex-7 с 326 тыс. логических ячеек, встроенной памятью DSP-блоками и поддержкой высокоскоростных интерфейсов (PCIe, SATA, DDR3). Корпус FFG676 (676-контактный BGA). Применяется в телекоммуникациях, обработке сигналов, машинном зрении.",
       image: "/productimg/XILINX.jpg",
       category: "Электронные компоненты"
     },
     {
       id: 8,
       name: "AD9361BBCZ — радиочастотный трансивер от компании Analog Devices",
-      description: "широкополосный RF-трансивер от Analog Devices с поддержкой диапазонов 70 МГц – 6 ГГц. Интегрирует 12-битные АЦП/ЦАП, программируемые фильтры и интерфейсы (LVDS, CMOS). Применяется в SDR, базовых станциях, военной и тестовой аппаратуре.",
+      description: "Широкополосный RF-трансивер от Analog Devices с поддержкой диапазонов 70 МГц – 6 ГГц. Интегрирует 12-битные АЦП/ЦАП, программируемые фильтры и интерфейсы (LVDS, CMOS). Применяется в SDR, базовых станциях, военной и тестовой аппаратуре.",
       image: "/productimg/AD9361BBCZ.jpg",
       category: "Электронные компоненты"
     }
@@ -68,6 +77,8 @@ const Products = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
+
+  const MAX_DESCRIPTION_LENGTH = 100; // Максимальная длина описания до обрезания
 
   return (
     <div className="products-page">
@@ -146,41 +157,62 @@ const Products = () => {
             transition={{ staggerChildren: 0.1 }}
             className="row g-4"
           >
-            {products.map((product) => (
-              <motion.div 
-                key={product.id}
-                variants={fadeIn}
-                className="col-md-6 col-lg-3"
-              >
-                <div className="card h-100 border-0 bg-light shadow-sm-hover transition-all rounded-4 overflow-hidden">
-                  <div className="position-relative">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="card-img-top p-3"
-                      style={{ height: '200px', objectFit: 'contain' }}
-                      loading="lazy"
-                    />
-                    <span className="position-absolute top-0 end-0 bg-primary text-white small px-3 py-2 rounded-start">
-                      {product.category}
-                    </span>
-                  </div>
-                  <div className="card-body p-4">
-                    <h3 className="h5 mb-3">{product.name}</h3>
-                    <p className="text-muted mb-4">{product.description}</p>
-                    <div className="d-grid">
-                      <Link 
-                        to="/contact" 
-                        className="btn btn-primary rounded-pill py-2"
-                        state={{ product: product.name }}
-                      >
-                        Заказать
-                      </Link>
+            {products.map((product) => {
+              const isExpanded = expandedDescriptions[product.id];
+              const shouldTruncate = product.description.length > MAX_DESCRIPTION_LENGTH;
+              const displayDescription = isExpanded 
+                ? product.description 
+                : (shouldTruncate 
+                    ? `${product.description.substring(0, MAX_DESCRIPTION_LENGTH)}...` 
+                    : product.description);
+
+              return (
+                <motion.div 
+                  key={product.id}
+                  variants={fadeIn}
+                  className="col-md-6 col-lg-3 d-flex"
+                >
+                  <div className="card w-100 border-0 bg-light shadow-sm-hover transition-all rounded-4 overflow-hidden d-flex flex-column">
+                    <div className="position-relative">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="card-img-top p-3"
+                        style={{ height: '200px', objectFit: 'contain' }}
+                        loading="lazy"
+                      />
+                      <span className="position-absolute top-0 end-0 bg-primary text-white small px-3 py-2 rounded-start">
+                        {product.category}
+                      </span>
+                    </div>
+                    <div className="card-body p-4 d-flex flex-column" style={{ flex: '1 0 auto' }}>
+                      <h3 className="h5 mb-3">{product.name}</h3>
+                      <p className="text-muted mb-3 flex-grow-1">
+                        {displayDescription}
+                        {shouldTruncate && (
+                          <button 
+                            onClick={() => toggleDescription(product.id)}
+                            className="btn btn-link p-0 ms-1 text-primary"
+                            style={{ textDecoration: 'none' }}
+                          >
+                            {isExpanded ? 'Свернуть' : '...'}
+                          </button>
+                        )}
+                      </p>
+                      <div className="d-grid mt-auto">
+                        <Link 
+                          to="/contact" 
+                          className="btn btn-primary rounded-pill py-2"
+                          state={{ product: product.name }}
+                        >
+                          Заказать
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>
