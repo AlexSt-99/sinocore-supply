@@ -42,7 +42,7 @@ const About = () => {
   };
 
   return (
-    <section className="py-5 about-section" id="about">
+    <section className="py-3 py-md-5 about-section" id="about">
       <div className="container">
         {/* Microdata for SEO */}
         <script type="application/ld+json">
@@ -77,12 +77,12 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="row align-items-center"
         >
-          <div className="col-lg-6 mb-5 mb-lg-0">
-            <h1 className="fw-bold mb-4 display-5">О компании Zenith Ltd.</h1>
-            <p className="lead text-primary mb-4">
+          <div className="col-lg-6 mb-4 mb-lg-0">
+            <h1 className="fw-bold mb-3 display-5" style={{ fontSize: 'calc(1.425rem + 2.1vw)' }}>О компании Zenith Ltd.</h1>
+            <p className="lead text-primary mb-3">
               Мы обеспечиваем российские предприятия надёжными поставками высокотехнологичной продукции — быстро, легально и без компромиссов по качеству.
             </p>
-            <div className="mb-4">
+            <div className="mb-3">
               <p>
                 <strong>Zenith Ltd.</strong> — это международная торговая компания, специализирующаяся на поставках электронной компонентной базы (ЭКБ), промышленного оборудования и товаров специального назначения из Китая в Россию.
               </p>
@@ -91,23 +91,23 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-light p-4 rounded-3 border-start border-primary border-4">
-              <h3 className="h5 fw-bold mb-3">Наша миссия</h3>
+            <div className="bg-light p-3 p-md-4 rounded-3 border-start border-primary border-4">
+              <h3 className="h5 fw-bold mb-2 mb-md-3">Наша миссия</h3>
               <p className="mb-0">
                 Обеспечивать российские предприятия надёжными поставками высокотехнологичной продукции — быстро, легально и без компромиссов по качеству.
               </p>
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6 mt-4 mt-lg-0">
             <div className="position-relative">
               <img 
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                 alt="О компании Zenith Ltd." 
-                className="img-fluid rounded-3 shadow-lg mb-4"
+                className="img-fluid rounded-3 shadow-lg w-100"
                 loading="lazy"
               />
-              <div className="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded-end">
+              <div className="position-absolute bottom-0 start-0 bg-primary text-white p-2 p-md-3 rounded-end">
                 <h3 className="h5 mb-0">7+ лет на рынке</h3>
               </div>
             </div>
@@ -119,17 +119,17 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ staggerChildren: 0.1 }}
-          className="row mt-5 g-4"
+          className="row mt-4 mt-md-5 g-3 g-md-4"
         >
           {advantages.map((item, index) => (
             <motion.div 
               key={index}
               variants={fadeIn}
-              className="col-md-6 col-lg-4"
+              className="col-12 col-sm-6 col-lg-4"
             >
-              <div className="card h-100 border-0 shadow-sm-hover p-4 transition-all">
+              <div className="card h-100 border-0 shadow-sm-hover p-3 p-md-4 transition-all">
                 <div className="card-body">
-                  <div className="d-flex align-items-center mb-3">
+                  <div className="d-flex align-items-center mb-2 mb-md-3">
                     <div className="bg-primary bg-opacity-10 p-2 rounded-3 me-3">
                       {item.icon}
                     </div>
@@ -142,6 +142,25 @@ const About = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* Мобильные стили */}
+      <style jsx>{`
+        @media (max-width: 767.98px) {
+          .about-section {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+          }
+          .card {
+            border-radius: 0.5rem !important;
+          }
+          .display-5 {
+            font-size: 1.75rem;
+          }
+          .lead {
+            font-size: 1.1rem;
+          }
+        }
+      `}</style>
     </section>
   );
 };

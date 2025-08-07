@@ -6,17 +6,15 @@ import {
   FaExchangeAlt, 
   FaIndustry, 
   FaCheckCircle,
-  FaRoute,
   FaFileContract,
   FaHandshake,
-  FaWarehouse,
   FaShippingFast
 } from 'react-icons/fa';
 
 const Services = () => {
   const services = [
     {
-      icon: <FaSearch size={40} className="text-primary mb-3" />,
+      icon: <FaSearch size={30} className="text-primary mb-2" />,
       title: "Поиск и закупка компонентов",
       description: "Подбор по спецификации или аналогам. Работа с китайскими заводами и крупными складами.",
       details: [
@@ -29,7 +27,7 @@ const Services = () => {
       note: "📌 Вы можете прислать нам BOM-файл, артикул или фото компонента — мы найдем."
     },
     {
-      icon: <FaShieldAlt size={40} className="text-primary mb-3" />,
+      icon: <FaShieldAlt size={30} className="text-primary mb-2" />,
       title: "Санкционные компоненты",
       description: "Поставки позиций, не доступных в РФ официально.",
       details: [
@@ -42,7 +40,7 @@ const Services = () => {
       note: "🛡️ Только для проверенных клиентов по запросу"
     },
     {
-      icon: <FaBoxes size={40} className="text-primary mb-3" />,
+      icon: <FaBoxes size={30} className="text-primary mb-2" />,
       title: "Логистика и консолидация",
       description: "Полный цикл доставки из Китая в Россию.",
       details: [
@@ -56,7 +54,7 @@ const Services = () => {
       note: "🚚 Опыт сложных логистических кейсов"
     },
     {
-      icon: <FaExchangeAlt size={40} className="text-primary mb-3" />,
+      icon: <FaExchangeAlt size={30} className="text-primary mb-2" />,
       title: "Подбор аналогов",
       description: "Замена недоступных компонентов.",
       details: [
@@ -69,7 +67,7 @@ const Services = () => {
       note: "🔍 Техподдержка инженеров"
     },
     {
-      icon: <FaIndustry size={40} className="text-primary mb-3" />,
+      icon: <FaIndustry size={30} className="text-primary mb-2" />,
       title: "Снабжение производств",
       description: "Комплексные решения для предприятий.",
       details: [
@@ -82,7 +80,7 @@ const Services = () => {
       note: "📦 Берём на себя все заботы по закупкам"
     },
     {
-      icon: <FaCheckCircle size={40} className="text-primary mb-3" />,
+      icon: <FaCheckCircle size={30} className="text-primary mb-2" />,
       title: "Контроль качества",
       description: "Гарантия подлинности и соответствия.",
       details: [
@@ -98,29 +96,29 @@ const Services = () => {
 
   const workflow = [
     {
-      icon: <FaFileContract size={30} className="text-primary" />,
+      icon: <FaFileContract size={24} className="text-primary" />,
       title: "Заявка",
       description: "Вы отправляете запрос с артикулами или списком"
     },
     {
-      icon: <FaSearch size={30} className="text-primary" />,
+      icon: <FaSearch size={24} className="text-primary" />,
       title: "Подбор",
       description: "Мы находим компоненты и согласовываем условия"
     },
     {
-      icon: <FaHandshake size={30} className="text-primary" />,
+      icon: <FaHandshake size={24} className="text-primary" />,
       title: "Договор",
       description: "Заключаем контракт и выставляем счет"
     },
     {
-      icon: <FaShippingFast size={30} className="text-primary" />,
+      icon: <FaShippingFast size={24} className="text-primary" />,
       title: "Доставка",
       description: "Поставляем товар на ваш склад под ключ"
     }
   ];
 
   return (
-    <section className="services-section py-5" id="services">
+    <section className="services-section py-4 py-lg-5" id="services">
       {/* Microdata for SEO */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -147,35 +145,35 @@ const Services = () => {
       </script>
 
       <div className="container">
-        <div className="text-center mb-5">
-          <h2 className="fw-bold display-5 mb-3">Наши услуги</h2>
-          <p className="lead text-muted max-w-800 mx-auto">
+        <div className="text-center mb-4 mb-lg-5">
+          <h2 className="fw-bold h1 mb-2 mb-lg-3">Наши услуги</h2>
+          <p className="lead text-muted mx-auto" style={{maxWidth: '800px'}}>
             Полный цикл поставки электроники, компонентов и оборудования из Китая в Россию — от поиска до доставки на ваш склад
           </p>
         </div>
 
-        <div className="row g-4 mb-5">
+        <div className="row g-3 g-lg-4 mb-4 mb-lg-5">
           {services.map((service, index) => (
-            <div key={index} className="col-md-6 col-lg-4">
+            <div key={index} className="col-12 col-md-6 col-lg-4">
               <div className="card h-100 border-0 shadow-sm-hover transition-all">
-                <div className="card-body p-4">
-                  <div className="text-center mb-4">
+                <div className="card-body p-3 p-lg-4">
+                  <div className="text-center mb-3 mb-lg-4">
                     {service.icon}
-                    <h3 className="h4 mt-3">{service.title}</h3>
-                    <p className="text-muted mb-4">{service.description}</p>
+                    <h3 className="h5 h4-lg mt-2 mt-lg-3">{service.title}</h3>
+                    <p className="text-muted mb-3 mb-lg-4">{service.description}</p>
                   </div>
                   
-                  <ul className="list-unstyled mb-4">
+                  <ul className="list-unstyled mb-3 mb-lg-4">
                     {service.details.map((detail, i) => (
-                      <li key={i} className="mb-2 d-flex">
+                      <li key={i} className="mb-1 mb-lg-2 d-flex">
                         <span className="text-primary me-2">✓</span>
-                        <span>{detail}</span>
+                        <span className="small small-lg">{detail}</span>
                       </li>
                     ))}
                   </ul>
                   
                   {service.note && (
-                    <div className="bg-light p-3 rounded text-center mt-auto">
+                    <div className="bg-light p-2 p-lg-3 rounded text-center mt-auto">
                       <small className="text-muted">{service.note}</small>
                     </div>
                   )}
@@ -185,26 +183,26 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="workflow-section bg-light rounded-3 p-4 p-lg-5 mt-5">
-          <h3 className="text-center mb-5 fw-bold">Как мы работаем</h3>
-          <div className="row g-4 justify-content-center">
+        <div className="workflow-section bg-light rounded-3 p-3 p-lg-5 mt-4 mt-lg-5">
+          <h3 className="text-center mb-4 mb-lg-5 fw-bold">Как мы работаем</h3>
+          <div className="row g-3 g-lg-4 justify-content-center">
             {workflow.map((step, index) => (
-              <div key={index} className="col-md-6 col-lg-3">
+              <div key={index} className="col-12 col-sm-6 col-lg-3">
                 <div className="d-flex flex-column align-items-center text-center h-100">
-                  <div className="bg-white rounded-circle p-4 mb-3 shadow-sm">
+                  <div className="bg-white rounded-circle p-3 p-lg-4 mb-2 mb-lg-3 shadow-sm">
                     {step.icon}
                   </div>
-                  <h4 className="h5">Шаг {index + 1}: {step.title}</h4>
-                  <p className="text-muted">{step.description}</p>
+                  <h4 className="h6 h5-lg mb-1 mb-lg-2">Шаг {index + 1}: {step.title}</h4>
+                  <p className="text-muted small small-lg">{step.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="partners-section mt-5">
-          <h4 className="text-center mb-4 fw-bold">Работаем с ведущими производителями:</h4>
-          <div className="d-flex flex-wrap justify-content-center gap-3">
+        <div className="partners-section mt-4 mt-lg-5">
+          <h4 className="text-center mb-3 mb-lg-4 fw-bold">Работаем с ведущими производителями:</h4>
+          <div className="d-flex flex-wrap justify-content-center gap-2 gap-lg-3">
             {[
               "Texas Instruments", "Analog Devices", "STMicroelectronics", 
               "Infineon", "NXP/Freescale", "Microchip/Atmel",
@@ -212,7 +210,7 @@ const Services = () => {
               "Murata/TDK/AVX", "Vishay/Bourns/Yageo", "GigaDevice",
               "Espressif Systems", "Allwinner/Rockchip", "BYD Semiconductor"
             ].map((brand, i) => (
-              <div key={i} className="badge bg-white text-dark border py-2 px-3">
+              <div key={i} className="badge bg-white text-dark border py-1 px-2 py-lg-2 px-lg-3 small">
                 {brand}
               </div>
             ))}
